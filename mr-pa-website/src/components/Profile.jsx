@@ -181,7 +181,6 @@ export default function Profile() {
     return (
       <div className="min-h-screen bg-black flex justify-center items-center">
         <motion.div
-          animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
           className="text-zinc-300 text-base font-medium flex items-center space-x-3"
         >

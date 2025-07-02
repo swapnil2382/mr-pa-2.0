@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 import ErrorBoundary from "./ErrorBoundary";
-import Header from "./components/Header";
+import Header from "./components/header";
 import Hero from "./components/hero";
 import Features from "./components/features";
 import Capabilities from "./components/Services";

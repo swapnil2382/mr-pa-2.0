@@ -23,7 +23,7 @@ const googleClient = new OAuth2Client({
 const twilioClient = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 // MongoDB setup
-mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/mrpa", {
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://swapnilpatil2382:GUVaFWrhB2wU5pfv@cluster0.nffaqhi.mongodb.net/mrpa?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log("Connected to MongoDB"))
