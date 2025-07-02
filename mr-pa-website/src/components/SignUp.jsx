@@ -5,7 +5,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
 import botimg from "../lib/mrpa.jpg";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://mr-pa-2-0.onrender.com";
 
 export default function SignUp() {
   const [name, setName] = useState("");

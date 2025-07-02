@@ -18,7 +18,7 @@ const TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER;
 const googleClient = new OAuth2Client({
   clientId: GOOGLE_CLIENT_ID,
   clientSecret: GOOGLE_CLIENT_SECRET,
-  redirectUri: "http://localhost:3000/api/auth/google/callback",
+  redirectUri: "https://mr-pa-2-0.onrender.com/api/auth/google/callback",
 });
 const twilioClient = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
@@ -279,7 +279,7 @@ app.get("/api/auth/google", (req, res) => {
   console.log("Received GET /api/auth/google");
   const url = googleClient.generateAuthUrl({
     scope: ["profile", "email"],
-    redirect_uri: "http://localhost:3000/api/auth/google/callback",
+    redirect_uri: "https://mr-pa-2-0.onrender.com/api/auth/google/callback",
   });
   res.redirect(url);
 });
@@ -290,7 +290,7 @@ app.get("/api/auth/google/callback", async (req, res) => {
   try {
     const { tokens } = await googleClient.getToken({
       code,
-      redirect_uri: "http://localhost:3000/api/auth/google/callback",
+      redirect_uri: "https://mr-pa-2-0.onrender.com/api/auth/google/callback",
     });
     const ticket = await googleClient.verifyIdToken({
       idToken: tokens.id_token,

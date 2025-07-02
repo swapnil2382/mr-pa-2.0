@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
             logout();
             return;
           }
-          const response = await fetch("http://localhost:3000/api/auth/user", {
+          const response = await fetch("https://mr-pa-2-0.onrender.com/api/auth/user", {
             headers: {
               Authorization: `Bearer ${token}`,
             },

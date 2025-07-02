@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
 import { User, Upload, Save, Info, AlertCircle, LogOut, Home, Menu, X, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap } from "lucide-react";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://mr-pa-2-0.onrender.com";
 
 export default function Profile() {
   const [isEditing, setIsEditing] = useState(false);
