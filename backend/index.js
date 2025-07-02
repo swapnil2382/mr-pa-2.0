@@ -55,7 +55,7 @@ const otpSchema = new mongoose.Schema({
 });
 const OTP = mongoose.model("OTP", otpSchema);
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "https://mr-pa-2-0.vercel.app", credentials: true }));
 app.use(express.json({ limit: "10mb" }));
 
 // Middleware to verify JWT
@@ -312,10 +312,10 @@ app.get("/api/auth/google/callback", async (req, res) => {
       JWT_SECRET,
       { expiresIn: "1h" }
     );
-    res.redirect(`http://localhost:5173/signin?token=${token}`);
+    res.redirect(`https://mr-pa-2-0.vercel.app/signin?token=${token}`);
   } catch (err) {
     console.error("Error in /api/auth/google/callback:", err);
-    res.redirect("http://localhost:5173/signin?error=Google%20authentication%20failed");
+    res.redirect("https://mr-pa-2-0.vercel.app/signin?error=Google%20authentication%20failed");
   }
 });
 
